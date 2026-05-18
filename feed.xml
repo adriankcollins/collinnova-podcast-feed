@@ -6,7 +6,7 @@
     <atom:link href="https://adriankcollins.github.io/collinnova-podcast-feed/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily NotebookLM briefings for Collinnova.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2026 05:56:11 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 13:44:18 +0000</lastBuildDate>
     <itunes:author>Collinnova</itunes:author>
     <itunes:summary>Daily NotebookLM briefings for Collinnova.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -16,8 +16,8 @@
       <description>Daily NotebookLM briefing for Collinnova.</description>
       <pubDate>Mon, 18 May 2026 12:00:00 +0000</pubDate>
       <guid isPermaLink="true">https://adriankcollins.github.io/collinnova-podcast-feed/episodes/2026-05-18_MorningBriefing.mp3</guid>
-      <enclosure url="https://adriankcollins.github.io/collinnova-podcast-feed/episodes/2026-05-18_MorningBriefing.mp3" length="9396372" type="audio/mpeg"/>
-      <itunes:duration>00:19:34</itunes:duration>
+      <enclosure url="https://adriankcollins.github.io/collinnova-podcast-feed/episodes/2026-05-18_MorningBriefing.mp3" length="2439441" type="audio/mpeg"/>
+      <itunes:duration>00:05:04</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
