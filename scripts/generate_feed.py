@@ -41,13 +41,22 @@ def main():
         size = os.path.getsize(filepath)
 
         # Parse date from filename like 2026-05-09_NotebookLM.mp3
+        # Use 00:01 UTC so pubDate is always in the PAST by the time the early-morning
+        # build runs (~5:20 AM CDT = ~10:20 UTC). Podcast clients (Kortex included)
+        # skip episodes whose pubDate is in the future, which broke auto-download.
         m = re.match(r"(\d{4}-\d{2}-\d{2})", filename)
         if m:
-            date = datetime.strptime(m.group(1), "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=12)
+            date = datetime.strptime(m.group(1), "%Y-%m-%d").replace(
+                tzinfo=timezone.utc, hour=0, minute=1
+            )
             title = f"Collinnova Briefing {m.group(1)}"
         else:
             date = datetime.fromtimestamp(os.path.getmtime(filepath), tz=timezone.utc)
             title = filename.replace(".mp3", "")
+        # Hard guarantee: never publish a future-dated episode.
+        now = datetime.now(tz=timezone.utc)
+        if date > now:
+            date = now
 
         pub = format_datetime(date)
         duration = get_duration(filepath)
